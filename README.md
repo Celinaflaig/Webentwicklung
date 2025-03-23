@@ -10,4 +10,4 @@ Beschreibung
 - Daraufhin wird erwähnt für wieviele Personen das Gericht konzipiert ist und wieviel Arbeitszeit aufgebracht werden muss.
 - Außerdem gibt es einen Hinweis, ob das jeweilige Gericht vegetarisch oder vegan ist.
 - Zuletzt wird die Zubereitung des Rezepts beschrieben.
-- Alle Rezepte werden alphabetisch in einem Inhaltsverzeichnis aufgelistet (auf der Startseite oder unter einem zusätzlichen Buttons).
+- Alle Rezepte werden alphabetisch in einem Inhaltsverzeichnis aufgelistet (auf der Startseite oder unter einem zusätzlichen Button).
