@@ -1,0 +1,30 @@
+p {
+    background: rgb(177, 68, 146);
+    color: white;
+}
+a {
+    font: Courier;
+    font: 14px Courier;
+    text-decoration: none;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-right: 2px solid white;
+  }
+  
+  .mainNav {
+    height: 30px;
+    background: darkblue;
+    padding-top: 7px;
+    padding-left: 5px;
+    margin-top: 20px;
+    box-shadow: 4px 6px rgb(107, 180, 188);
+    overflow: hidden;
+  }
+
+  p {
+    font-family: "Georgia", cursive;
+    font-size: 2em;
+  }
+  table{
+    background: red;
+  }
