@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezepte</title>
-    <!-- Verweis auf die externe CSS-Dateien -->
-    <link rel="stylesheet" href="Rezepte.css">
-    
+    <title>Alle Rezepte</title>
+    <link rel="stylesheet" href="Rezeptliste.css">
+    <script src="Javascript.js" defer></script>
 </head>
-
 <body>
-    <!-- Header -->
     <header>
-        <h1>Rezepte</h1>
+        <h1>Alle Rezepte</h1>
         <nav>
             <ul>
                 <li><a href="./Startseite.html">Startseite</a></li>
@@ -22,111 +19,14 @@
         </nav>
     </header>
 
-    <!-- Hauptbereich -->
     <main>
-        
-            <!--Rezept 1-->
-            <div class="recipe-item">
-                <h1>Spaghetti Bolognese</h1>
-                <hr/>
-                
-                <div class="form-row">
-                    <p><strong>Portionen:</strong> 2</p>
-                    <p><strong>Zubereitungszeit:</strong> 30 Minuten</p>
-                    <p><strong>Schwierigkeit:</strong> einfach</p>
-                </div>
-                <p><strong>Zutaten:</strong></p>
-                    <ul>
-                        <li>200g Spaghetti</li>
-                        <li>250g Hackfleisch</li>
-                        <li>1 Knoblauchzeh</li>
-                        <li>1 kleine Zwiebeln</li>
-                        <li>1 Karotte</li>
-                        <li>1 EL Olivenöl</li>
-                        <li>400g gehackte Tomaten</li>
-                        <li>100ml Rotwein</li>
-                        <li>1 TL Oregano</li>
-                        <li>1 TL Basilikum</li>
-                        <li>Salz, Pfeffer</li>
-                        <li>Parmesan</li>
-                    </ul>
-                <p><strong>Zubereitung:</strong> </p>
-                    <p>Die Nudeln nach Packungsanweisung in Salzwasser al dente garen.
-                        Olivenöl in einer Pfanne erhitzen, Zwiebel und Knoblauch darin anbraten.
-                        Hackfleisch hinzufügen und krümelig braten. Karotten dazugeben und kurz mitdünsten.
-                        Tomatenmark einrühren, mit Rotwein ablöschen (falls verwendet), gehackte Tomaten und Gewürze hinzufügen. 15–20 Minuten köcheln lassen.
-                        Die Soße über die Spaghetti geben und mit Parmesan bestreuen.</p>
-                <button>Bearbeiten</button>
-                <button>Löschen</button>
-            </div>
-            <!--Rezept 2-->
-            <div class="recipe-item">
-                <h1>Pink Pasta</h1>
-                <hr/>
-                <div class="form-row">
-                    <p><strong>Portionen:</strong> 2</p>
-                    <p><strong>Zubereitungszeit:</strong> 20 Minuten</p>
-                    <p><strong>Schwierigkeit:</strong> einfach</p>
-                </div>
-                <p><strong>Zutaten:</strong></p>
-                <ul>
-                    <li>200g Pasta</li>
-                    <li>1 Rote Bete</li>
-                    <li>100ml Sahne</li>
-                    <li>1 Knoblauchzeh</li>
-                    <li>1 EL Olivenöl</li>
-                    <li>1 TL Zitronensaft</li>
-                    <li>Salz, Pfeffer</li>
-                    <li>Frische Kräuter</li>
-                </ul> 
-                <p><strong>Zubereitung:</strong> </p>
-                    <p> Die Nudeln nach Packungsanweisung in Salzwasser al dente kochen.
-                        Die Rote Bete würfeln und mit Sahne, Knoblauch, Olivenöl, Zitronensaft, Salz und Pfeffer in einem Mixer pürieren, bis eine cremige Soße entsteht.
-                        Die Soße in einer Pfanne leicht erwärmen (nicht kochen, damit die Farbe erhalten bleibt).
-                        Die gekochte Pasta in die Pfanne geben und gut mit der Soße vermengen.
-                        Mit zerbröseltem Feta und frischen Kräutern garnieren.</p>
-                <button>Bearbeiten</button>
-                <button>Löschen</button>
-            </div>
-            <!--Rezept 3-->
-            <div class="recipe-item">
-                <h1>Couscous Caprese Salat</h1>
-                <hr/>
-                <div class="form-row">
-                    <p><strong>Portionen:</strong> 2</p>
-                    <p><strong>Zubereitungszeit:</strong> 15 Minuten</p>
-                    <p><strong>Schwierigkeit:</strong> sehr einfach</p>
-                </div>
-                    <p><strong>Zutaten:</strong></p>
-                            <ul>
-                            <li>150g Coucous</li>
-                            <li>200ml heißes Wasser</li>
-                            <li>150g Cherrytomaten</li>
-                            <li>125g Mozarella</li>
-                            <li>1 Handvoll frisches Basilikum</li>
-                            <li>2 EL Olivenöl</li>
-                            <li>1 EL Balsamico-Essig</li>
-                            <li>1 TL Zitronensaft</li>
-                            <li>Salz, Pfeffer</li>
-                            </ul>
-                    
-                    
-                <p><strong>Zubereitung:</strong> </p>
-                    <p>Den Couscous in eine Schüssel geben, mit heißem Wasser oder Gemüsebrühe übergießen, abdecken und 5–10 Minuten quellen lassen. Anschließend mit einer Gabel auflockern.
-                        Cherrytomaten, Mozzarella und Basilikum unter den Couscous mischen.
-                        Olivenöl, Balsamico-Essig, Zitronensaft, Salz und Pfeffer vermengen und über den Salat geben.
-                        Den Salat für ca. 10 Minuten ziehen lassen, dann servieren.</p>
-                <button>Bearbeiten</button>
-                <button>Löschen</button>
-            </div>
-        
-         
+        <div class="rezepte-list">
+            <div id="rezepteContainer"></div>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Digitales Rezeptbuch.</p>
     </footer>
-
 </body>
 </html>

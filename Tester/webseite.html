@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webseite.css">
+    <script src="webseite.js"></script>
+    <title>Rezeptverwaltung</title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1>Rezeptverwaltung</h1>
+    </header>
+<!--Navigation-->
+    <nav>
+        <ul>
+            <li><a href="./webseite.html">Startseite</a></li>
+            <li><a href="./favoriten.html">Zu den Lieblingsrezepten</a></li>
+            <li><a href="./Rezepte.html">Rezepte</a></li>
+        </ul>
+    </nav>
+<main>
+    <form id="recipeForm">
+        <input type="text" id="recipeName" placeholder="Rezeptname" required>
+        <textarea id="recipeInstructions" placeholder="Zubereitung" required></textarea>
+        <button type="submit">Rezept hinzufügen</button>
+    </form>
+    <h2>Rezepte</h2>
+    <ul id="recipeList"></ul>
+    <a href="favoriten.html">Zu den Lieblingsrezepten</a>
+
+</main>
+    
+</body>
+</html>

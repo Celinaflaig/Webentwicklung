@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neues Rezept hochladen</title>
     <link rel="stylesheet" href="Rezeptliste.css">
-    
+    <script src="Javascript.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -26,39 +26,37 @@
             <h1>Rezeptliste</h1>
             <hr>
             <!-- Rezeptformular -->
-            <div class="form-section">
-                <label>Rezeptname</label>
-                <input type="text">
-            </div>
-            <div class="form-row">
-                <div class="form-section">
-                    <label>Portionen</label>
-                    <input type="text">
-                </div>
-                <div class="form-section">
-                    <label>Zubereitungszeit</label>
-                    <input type="text">
-                </div>
-                <div class="form-section">
-                    <label>Schwierigkeit</label>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="form-section">
-                <label>Zutaten</label>
-                <textarea></textarea>
-            </div>
-    
-            <div class="form-section">
-                <label>Zubereitung</label>
-                <textarea></textarea>
-            </div>
-    
             
-            
-            <div class="form-section">
-            <button>Rezept speichern</button>
-            </div>
+                <div class="form-section" id="rezeptliste">
+                    <label>Rezeptname</label>
+                    <input type="text"placeholder="Rezeptname" id="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-section" id="rezeptliste">
+                        <label>Portionen</label>
+                        <input type="text" placeholder="Portionen" id="portionen">
+                    </div>
+                    <div class="form-section" id="rezeptliste">
+                        <label>Zubereitungszeit</label>
+                        <input type="text"placeholder="Zubereitungszeit" id="zeit">
+                    </div>
+                    <div class="form-section">
+                        <label>Schwierigkeit</label>
+                        <input type="text"placeholder="Schwierigkeit" id="schwierigkeit">
+                    </div>
+                </div>
+                <div class="form-section" id="rezeptliste">
+                    <label>Zutaten</label>
+                    <textarea placeholder="Zutaten" id="zutaten"></textarea>
+                </div>
+        
+                <div class="form-section" id="rezeptliste">
+                    <label>Zubereitung</label>
+                    <textarea placeholder="Zubereitung" id="zubereitung"></textarea>
+                </div>
+                <div class="form-section" id="rezeptliste">
+                <button type="submit">Rezept speichern</button>
+                </div>
     </main>
 
     <!-- Footer -->
