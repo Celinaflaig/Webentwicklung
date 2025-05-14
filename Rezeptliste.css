@@ -47,10 +47,12 @@ main {
 .recipe-card {
     background: white;
     padding: 50px;
-    width: 800px;
+    width: 100%;
+    max-width: 1000px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .recipe-card h1 {
@@ -67,19 +69,19 @@ hr {
     margin-bottom: 10px;
 }
 /*Eingabekategorien in Reihe*/
-.form-row {
+/*.form-row {
     display: flex;
     justify-content: space-between;
-}
+}*/
 
 .form-row .form-section {
-    width: 30%;
+    width: 100%;
 }
 /*Name des Eingabefelds*/
 label {
     font-weight: bold;
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 3px;
 }
 
@@ -97,7 +99,7 @@ textarea {
 
 /*Rezept speichern*/
 button {
-    width: 100%;
+    /*width: 100%;*/
     padding: 10px;
     background-color: #000;
     color: white;

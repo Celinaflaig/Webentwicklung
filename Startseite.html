@@ -13,9 +13,9 @@
     <h1>Lieblingsrezepte</h1>
     <nav>
         <ul>
-            <li><a href="./Startseite.html">Startseite</a></li>
-            <li><a href="./Rezepte.html">Rezepte</a></li>
-            <li><a href="./Rezeptliste.html">Neues Rezept hochladen</a></li>
+            <li><a href="./Startseite.html">Lieblingsrezepte</a></li>
+            <li><a href="./Rezepte.html">Alle Rezepte</a></li>
+            <li><a href="./Rezeptliste.html">Neues Rezept</a></li>
         </ul>
     </nav>
 </header>
@@ -30,34 +30,6 @@
     <p>&copy; 2025 Digitales Rezeptbuch.</p>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const rezepte = JSON.parse(localStorage.getItem('rezepte')) || [];
-        const favoriten = rezepte.filter(r => r.favorit);
-        const container = document.getElementById('favoritenContainer');
-
-        if (favoriten.length === 0) {
-            container.innerHTML = '<p>Keine Lieblingsrezepte gefunden.</p>';
-        } else {
-            favoriten.forEach(rezept => {
-                const rezeptElement = document.createElement('div');
-                rezeptElement.className = 'recipe-card';
-                rezeptElement.innerHTML = `
-                    <h2>${rezept.name}</h2>
-                    <hr>
-                    <p><strong>Portionen:</strong> ${rezept.portionen}</p>
-                    <p><strong>Zubereitungszeit:</strong> ${rezept.zeit}</p>
-                    <p><strong>Schwierigkeit:</strong> ${rezept.schwierigkeit}</p>
-                    <h3>Zutaten</h3>
-                    <p>${rezept.zutaten.replace(/\n/g, "<br>")}</p>
-                    <h3>Zubereitung</h3>
-                    <p>${rezept.zubereitung.replace(/\n/g, "<br>")}</p>
-                `;
-                container.appendChild(rezeptElement);
-            });
-        }
-    });
-</script>
 
 </body>
 </html>
