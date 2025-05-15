@@ -68,11 +68,7 @@ hr {
 .form-section {
     margin-bottom: 10px;
 }
-/*Eingabekategorien in Reihe*/
-/*.form-row {
-    display: flex;
-    justify-content: space-between;
-}*/
+
 
 .form-row .form-section {
     width: 100%;
@@ -99,7 +95,7 @@ textarea {
 
 /*Rezept speichern*/
 button {
-    /*width: 100%;*/
+    
     padding: 10px;
     background-color: #000;
     color: white;

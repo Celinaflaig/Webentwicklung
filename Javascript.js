@@ -64,7 +64,7 @@ function loeschenRezept(id) {
   if (confirm("Möchtest du dieses Rezept wirklich löschen?")) { //Popup-Fenster
       let rezepte = JSON.parse(localStorage.getItem('rezepte')) || []; //JSON-String wird zu einem JavaScript-Array umgewandelt
       rezepte = rezepte.filter(rezept => rezept.id !== id); //erstellt ein neues Array
-      localStorage.setItem('rezepte', JSON.stringify(rezepte)); //das neue Array wird wieder in ein JSON-String umgeandelt
+      localStorage.setItem('rezepte', JSON.stringify(rezepte)); //das neue Array wird wieder in ein JSON-String umgewandelt
       anzeigenRezepte(); // Neu laden/aktualisieren
   }
 }
@@ -72,7 +72,7 @@ function loeschenRezept(id) {
 
 // Rezept bearbeiten
 function bearbeitenRezept(id) { //eindeutige ID eines Rezeptes aufrufen
-  const rezepte = JSON.parse(localStorage.getItem('rezepte')) || []; //holt alle gespeicherten Rezepte aus dem lokalen Speicher; JSON-String wird in ein Array von Rezept-Objekten umgewandelt
+  const rezepte = JSON.parse(localStorage.getItem('rezepte')) || []; //holt alle gespei. Rezepte aus dem lok. Speicher; JSON-String wird in ein Array von Rezept-Objekten umgewandelt
   const rezept = rezepte.find(r => r.id === id); //durchsucht das Array nach dem Rezept, dessen id mit dem übergebenen Wert übereinstimmt
 
   if (rezept) {
@@ -121,15 +121,15 @@ function toggleFavorit(id) {
   if (index !== -1) { //nur wenn ein gültiger Index vorhanden ist
       rezepte[index].favorit = !rezepte[index].favorit; //aktuelle Wert von favorit wird hier inventiert: true zu false, false zu true
       localStorage.setItem('rezepte', JSON.stringify(rezepte));
-      anzeigenRezepte(); // Refresh der Liste
+      anzeigenRezepte(); // Neu laden
   }
 }
 
 //Anzeige der Lieblingsrezepten
 document.addEventListener('DOMContentLoaded', () => {
   const rezepte = JSON.parse(localStorage.getItem('rezepte')) || [];
-  const favoriten = rezepte.filter(r => r.favorit);
-  const container = document.getElementById('favoritenContainer');
+  const favoriten = rezepte.filter(r => r.favorit); //durchläuft jedes rezept, sucht Rezepte, die die Eigenschaft favorit also true haben
+  const container = document.getElementById('favoritenContainer'); //HTML-Container wird über seine ID geholt
 
   if (favoriten.length === 0) {
       container.innerHTML = '<p>Keine Lieblingsrezepte gefunden.</p>';
@@ -152,17 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>${rezept.zubereitung.replace(/\n/g, "<br>")}</p>
               <button class="unfavoritieren-btn" data-id="${rezept.id}">★ Aus Favoriten entfernen</button>
           `;
-          container.appendChild(rezeptElement);
+          container.appendChild(rezeptElement); //Rezept-Element wird in den Container eingefügt
       });
 
-  // Jetzt alle "Entfernen aus Favoriten"-Buttons aktivieren
-  document.querySelectorAll('.unfavoritieren-btn').forEach(button => {
-  button.addEventListener('click', (e) => {
-    const id = Number(e.target.getAttribute('data-id'));
+  // "Entfernen aus Favoriten"-Buttons
+  document.querySelectorAll('.unfavoritieren-btn').forEach(button => { //alle mit unfavoritierten Button
+  button.addEventListener('click', (e) => { //bei jedem Klick soll das untere ausgeführt werden
+    const id = Number(e.target.getAttribute('data-id')); //der Wert der data-id-Attributs wird in eine Zahl umgewandelt
     let alleRezepte = JSON.parse(localStorage.getItem('rezepte')) || [];
-    const index = alleRezepte.findIndex(r => r.id === id);
+    const index = alleRezepte.findIndex(r => r.id === id); //durchsucht das Array alleRezepte nach einem Rezept mit genau der ID, die aus dem Button stammt
     if (index !== -1) {
-    alleRezepte[index].favorit = false;
+    alleRezepte[index].favorit = false; //wenn eins gefunden wurde: Eigenschaft favorit auf false
     localStorage.setItem('rezepte', JSON.stringify(alleRezepte));
     window.location.reload(); // Liste neu laden
     }
